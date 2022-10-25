@@ -1,3 +1,8 @@
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -24,20 +29,22 @@
     margin-top: 5px;
 }
 
-.menu li {
+.menu li a {
     padding: 11px 7px 11px 6px;
+    transition: 0.3s ease-in-out;
 }
 
-.menu li:hover {
+.menu li a:hover {
     background-color: #5bc241;
     color: #fff;
     cursor: pointer;
 }
 
-.menu li:last-child {
+.menu a.btn {
     padding: 10px 21px 11px 21px;
     border-radius: 10px;
     background-color: #5bc241;
+    color: #fff;
 }
 
 /* @media (max-width: 769px){ */
@@ -45,75 +52,59 @@
     .menu {
         gap: 15px;
         margin-right: 20px;
+
     }
 
     .header .logo {
         margin-left: 24px;
     }
 
-    .menu li {
+    .menu li a {
         padding: 6px;
     }
 
-    .menu li:last-child {
+    .menu a.btn {
         padding: 6px;
     }
 }
 
-@media (max-width: 680px){
-    .header .logo {
-        margin-left: 5px;
+@media (max-width: 650px){
+    .header {
+        flex-direction: column;
     }
     
     .menu {
-        margin-right: 5px;
-        gap: 3px;
+        margin-top: 1em;
+        /* gap: 3px; */
     }
     
-    .menu li {
-        font-size: 12px;
-    }
-
 }
 
-@media (max-width: 490px){
+
+@media (max-width: 485px){
     .header {
-        margin-top: 50px;
-        display: block;
-        text-align: center;
-    }
-
-    .header .logo {
-        justify-content: center;
-        margin-left: 0;
-    }
-
-    .logo img {
-        width: 65px;
+        flex-direction: column;
     }
 
     .logo h1 {
         font-size: 40px;
     }
 
-    nav {
-        width: 100%;
-        margin-bottom: 81px;
-    }
-
     .menu {
-        display: inline-block;
+        flex-direction: column;
         margin-top: 100px;
         margin-right: 0;
+        align-items: center;
+        gap: 50px;
     }
 
-    .menu li {
+    .menu li a {
         font-size: 40px;
         padding: 17px 38px 17px 41px;
         margin-bottom: 50px;
     }
 
-    .menu li:last-child {
+    .menu a.btn {
         font-size: 18px;
         padding: 15px 22px 15px 23px;
     }
